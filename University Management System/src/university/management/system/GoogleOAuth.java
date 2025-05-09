@@ -11,8 +11,8 @@ import io.github.cdimascio.dotenv.Dotenv;
 
 public class GoogleOAuth {
     private static final Dotenv dotenv = Dotenv.load();
-    private static final String CLIENT_ID = "179000761050-h4bpt63p0it37gr66u1g2pl73mc9fut6.apps.googleusercontent.com";
-    private static final String CLIENT_SECRET = "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";
+    private static final String CLIENT_ID = dotenv.get("GOOGLE_CLIENT_ID");
+    private static final String CLIENT_SECRET = dotenv.get("GOOGLE_CLIENT_SECRET");
     private static final String REDIRECT_URI = "http://localhost:8080/callback";
     private static final String TOKEN_ENDPOINT = "https://oauth2.googleapis.com/token";
     private static final String USERINFO_ENDPOINT = "https://www.googleapis.com/oauth2/v2/userinfo";
